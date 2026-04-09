@@ -28,8 +28,52 @@ __Procedure__:
 6) Coherent demodulation (multiply by synchronized carrier)
 7) Low-pass filter to recover message
 
-   __Tabulation__:
+ __Program__:
+ ```python
+import numpy as np
+import matplotlib.pyplot as plt
 
+Am = 9.7
+Ac = 19.4
+
+fm = 366
+fc = 3660
+
+fs = 36600
+
+t = np.arange(0, 1/fm, 1/fs)
+
+m = Am * np.cos(2 * np.pi * fm * t)
+
+c = Ac * np.cos(2 * np.pi * fc * t)
+
+dsb_sc = m * c
+
+plt.subplot(3,1,1)
+plt.plot(t, m)
+plt.title("Message Signal m(t)")
+plt.xlabel("Time (s)")
+plt.ylabel("Amplitude")
+
+plt.subplot(3,1,2)
+plt.plot(t, c)
+plt.title("Carrier Signal c(t)")
+plt.xlabel("Time (s)")
+plt.ylabel("Amplitude")
+
+plt.subplot(3,1,3)
+plt.plot(t, dsb_sc)
+plt.title("DSB-SC Modulated Signal")
+plt.xlabel("Time (s)")
+plt.ylabel("Amplitude")
+
+plt.tight_layout()
+plt.show()
+```
    __Output__:
+   
+<img width="801" height="602" alt="DSBSC Modulation using python" src="https://github.com/user-attachments/assets/5e031dc9-1f4b-4cfc-af55-3543587f4c99" />
 
    __Result__:
+
+   Thus DSB--SC-Modulation-and-Demodulation-using-NumPy-and-Matplotlib is experimentally done and the output is verified
