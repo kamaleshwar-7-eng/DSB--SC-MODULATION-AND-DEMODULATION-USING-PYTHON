@@ -70,6 +70,10 @@ plt.ylabel("Amplitude")
 plt.tight_layout()
 plt.show()
 ```
+__Tabulation__:
+
+![WhatsApp Image 2026-02-20 at 10,37,13 AM-Picsart-AiImageEnhancer](https://github.com/user-attachments/assets/d96f5865-0210-4ac4-b524-1bd5e7a48b27)
+
    __Output__:
    
 <img width="801" height="602" alt="DSBSC Modulation using python" src="https://github.com/user-attachments/assets/5e031dc9-1f4b-4cfc-af55-3543587f4c99" />
